@@ -3,35 +3,74 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>简单网页示例</title>
+    <title>上海亚格之芯科技有限公司</title>
     <style>
+        /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
+        /* 头部样式 */
         header {
             background-color: #333;
-            color: #fff;
-            padding: 20px;
+            color: white;
             text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        main {
             padding: 20px;
         }
 
+        /* 导航栏样式 */
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* 主体内容样式 */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* 页脚样式 */
         footer {
-            background-color: #555;
-            color: #fff;
-            padding: 10px;
+            background-color: #333;
+            color: white;
             text-align: center;
+            padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -41,14 +80,30 @@
 
 <body>
     <header>
-        <h1>我的网页</h1>
+        <h1>上海亚格之芯科技有限公司</h1>
     </header>
-    <main>
-        <p>这是一个简单的网页示例。</p>
-        <p>它包含了一个头部、主体内容和底部的页脚。</p>
-    </main>
+    <nav>
+        <a href="#">首页</a>
+        <a href="#">关于我们</a>
+        <a href="#">产品</a>
+        <a href="#">服务</a>
+        <a href="#">联系我们</a>
+    </nav>
+    <section>
+        <h2>公司简介</h2>
+        <img src="company_introduction_image.jpg" alt="公司介绍图片">
+        <p>这里是公司简介内容，你可以详细介绍公司的发展历程、核心业务、技术优势等。例如，我们公司是一家专注于高科技领域的创新型企业，致力于为客户提供优质的技术解决方案。</p>
+    </section>
+    <section>
+        <h2>我们的产品</h2>
+        <p>此处可以列举公司的主要产品信息，包括产品特点、应用场景等。</p>
+    </section>
+    <section>
+        <h2>联系我们</h2>
+        <p>地址：[公司地址]。电话：[公司电话]。邮箱：[公司邮箱]。</p>
+    </section>
     <footer>
-        Copyright © 2024. All rights reserved.
+        &copy; 2024 上海亚格之芯科技有限公司. All rights reserved.
     </footer>
 </body>
 
