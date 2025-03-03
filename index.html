@@ -7,8 +7,8 @@
     <style>
         /* 全局样式 */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -16,16 +16,21 @@
 
         /* 头部样式 */
         header {
-            background-color: #333;
+            background-color: #3677b8; /* 淡蓝色 */
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
         /* 导航栏样式 */
         nav {
-            background-color: #444;
             overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
@@ -33,82 +38,124 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 16px 20px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         nav a:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: #575757;
+            color: white;
         }
 
         /* 主体内容样式 */
         section {
-            padding: 20px;
-            margin: 20px;
+            padding: 40px;
+            margin: 0; /* 移除间隙 */
             background-color: white;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
         }
 
         h2 {
-            color: #333;
+            color: #222;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         p {
-            color: #666;
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
         }
 
         img {
             max-width: 100%;
             height: auto;
             display: block;
-            margin: 10px auto;
+            margin: 20px auto;
         }
 
         /* 页脚样式 */
         footer {
-            background-color: #333;
+            background-color: #165594; /* 淡蓝色 */
             color: white;
             text-align: center;
             padding: 10px;
             position: fixed;
             bottom: 0;
             width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>上海亚格之芯科技有限公司</h1>
+    <header style="background: url('header_backgroud.png') no-repeat center center; background-size: cover; height: 150px; display: flex; align-items: center; justify-content: center; padding: 0 20px; flex-direction: column;">
+        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+    
+            <div style="display: flex; align-items: center;">
+            <img src="logo2.png" alt="公司Logo" style="height: 100px; margin-right: 20px;">
+            <h1 style="color: white; margin: 0;">上海亚格之芯科技有限公司</h1>
+            </div>
+            <nav style="margin-right: 200px;"></nav>
+                <a href="#about">关于我们</a>
+                <a href="#products">产品介绍</a>
+                <a href="#contact">联系我们</a>
+            </nav>
+        </div>
+
     </header>
-    <nav>
-        <a href="#">首页</a>
-        <a href="#">关于我们</a>
-        <a href="#">产品</a>
-        <a href="#">服务</a>
-        <a href="#">联系我们</a>
-    </nav>
-    <section>
-        <img src="logo.png" alt="公司介绍图片">
-	<p>欢迎来到亚格之芯，一家在网络技术领域崭露头角的创新型公司。我们专注于研发和生产先进的网络设备，核心产品为 SuperNIC。</p>
+    <section id="about" style="background: url('about_us.png') no-repeat center; background-size: cover; padding: 120px 0;">
+        <div style="max-width: 90ch; margin-left: 5ch; color: white;">
+            <p style="color: white;">
+                在数字化浪潮与全球网络格局变革中，亚格之芯凭借创新精神和技术底蕴，屹立于网络科技前沿。作为行业领军企业，它汇聚全球顶尖人才组建研发团队。
+            </p>
+            <p style="color: white;">
+                亚格之芯以创新为核心，再数据中心和智算中心研发成果显著，核心产品 DPU 和 SuperNIC 表现卓越。
+            </p>
+            <p style="color: white;">
+                未来，亚格之芯将继续秉持创新理念，深耕网络技术领域，提升产品性能，拓展应用场景，为全球提供优质网络方案，携手推动网络科技产业发展，开启网络技术新篇章。
+            </p>
+        </div>
     </section>
-    <section>
-        <p>核心产品：SuperNIC</p>
-	<p>亚格的产品主要是SuperNIC，分别为SuperNIC100/200/400等不同型号：</p>
-	<p>SuperNIC100/200:主要工作在AI集群的前端网络，插在AI服务器的CPU侧，和CPU直接连接，主要
-提供的功能是对接云平台和调度平台，比如AI推理的流量、AI训练过程job的下发、弹性裸金属管理、
-checkpoint的流量等都是通过SuperNIC100/200来实现，相对于SuperNIC400来说，性能弱一些，一般
-50G/100G就够了，而且提供双口能力做双上联。</p>
-	<p>SuperNIC400：主要工作在AI集群的后端网络，一般插在AI服务器的GPU侧，和GPU直接连接，提
-供AI训练过程中后端网络的传输能力。主流的Nvidia Hopper GPU和SuperNIC400一般是1比1，国内
-GPU有2比1甚至4比1的配比。网络端口智算中心当前单口400G为主，大的CSP有采用双口方案。</p>
+    <section id="products" style="display: flex; align-items: center; justify-content: space-between; padding: 40px;">
+        <div style="flex: 1; padding-right: 20px;">
+            <h2>Yucca DPU</h2>
+            <p>智能算力调配：Yucca DPU 是智算中心算力运营变革的关键，拥有强大弹性裸金属能力。可精细隔离物理 AI 服务器的网络、存储资源，实现多用户间高效流转，如同智算中心的 “智能中枢”，提升算力利用率，降低运营成本，支撑大规模智算中心高效运作。</p>
+            <p>网络存储优化：网络上，全面支持 SRIOV、OVS Offload 等技术，构建高速稳定数据传输通道。存储方面，支持 Ceph、iSCSI 等，满足不同场景数据存储需求，保障数据存储与读取的高效可靠。</p>
+            <p>多元加速赋能：融合 GPU Direct RDMA、Pcie P2P 等 AI 加速技术及先进虚拟化加速技术，提升数据处理与传输效率，降低系统开销，轻松应对复杂 AI 计算及虚拟化多任务处理，带来流畅体验。</p>
+            <p>高效管控适配：提供基于 libvirt 和基于 CNI 的管控适配，打造便捷高效管理平台，实现系统全面监控与精准控制，保障系统稳定，合理利用资源。</p>
+        </div>
+
+        <div style="flex: 1; text-align: center;">
+            <img src="yucca_dpu.png" alt="SuperNIC 产品图片" style="max-width: 100%; height: auto; max-height: 400px;">
+        </div>
     </section>
-    <section>
-	    <p>亚格之芯汇聚了一批行业内经验丰富、技术精湛的专业人才，他们致力于为客户打造高性能、可靠且具有前瞻性的网络解决方案。我们的 SuperNIC 作为拳头产品，拥有卓越的性能和独特的优势，能够满足当今复杂网络环境下企业和机构对高速、稳定网络连接的需求。无论是数据中心、云计算环境还是企业级网络，SuperNIC 都展现出了出色的适用性和稳定性，为客户的网络基础设施提供了强大的支持，助力客户在数字化时代保持领先竞争力。</p>
+        <section id="products" style="display: flex; align-items: center; justify-content: space-between; padding: 40px;">
+        <div style="flex: 1; padding-right: 20px;">
+            <h2>Yucca SuperNIC</h2>
+            <p>超强网络传输：Yucca SuperNIC 专为解决以太网 AI 训练大规模数据传输难题，堪称 AI 训练网络的 “高速引擎”。支持 GPU Direct RDMA 等 AI 加速技术，搭配标准 ROCEv2、自研及开放 UEC 协议，有效解决数据丢包、拥塞问题，提升传输效率与稳定性，保障 AI 训练网络。</p>
+            <p>高带宽低延迟：总带宽高达 2x200Gbps 甚至更高，转发速率达 250Mpps，数据传输极快，大幅降低延迟，有力支持 AI 训练实时数据交互，提升模型训练效率。</p>
+            <p>丰富功能集成：集成 OVS 等网络加速功能与多种 RDMA 技术，持续演进。后续版本将加入 Adaptive routing 等功能，满足 AI 训练复杂网络需求，提供灵活高效网络方案。</p>
+            <p>灵活适配拓展：拥有 PCIe Gen5x16 等 Host 接口与 Virtio Net 设备类型，能与各类 AI 服务器及网络环境适配，便于系统集成与升级。扩展性强，可随技术与业务发展轻松升级功能与性能，保障用户长期发展。</p>
+       </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="yucca_nic.png" alt="SuperNIC 产品图片" style="max-width: 100%; height: auto; max-height: 400px;">
+        </div>
+    </section>
+    <section id="contact" style="display: flex; align-items: center; justify-content: center; padding-left: 40px;">
+        <div style="flex: 1; text-align: center;">
+            <img src="logo1.png" alt="公司Logo" style="max-width: 100%; height: auto; max-height: 200px;">
+        </div>
+        <div style="flex: 1;">
         <h2>联系我们</h2>
-        <p>地址：上海市闵行区浦江科技广场 邮箱：yucca@yuccacloud.com</p>
-    </section>
+        <p>上海亚格之芯技术有限公司</p>
+        <p>地址：上海市闵行区浦江科技广场</p>
+        <p>邮箱：yucca@yuccacloud.com</p>
+    </div>
+
+</section>
     <footer>
         &copy; 2024 上海亚格之芯科技有限公司. All rights reserved.
     </footer>
